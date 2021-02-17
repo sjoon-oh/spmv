@@ -1,0 +1,19 @@
+﻿  Compiling CUDA source file kernel.cu...
+  
+  C:\Users\acous\Documents\Visual Studio 2017\Projects\week3_spmv\week3_spmv>"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v11.2\bin\nvcc.exe" -gencode=arch=compute_52,code=\"sm_52,compute_52\" --use-local-env -ccbin "C:\Program Files (x86)\Microsoft Visual Studio\2017\Professional\VC\Tools\MSVC\14.16.27023\bin\HostX86\x64" -x cu   -I"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v11.2\include" -I"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v11.2\include"     --keep-dir x64\Release  -maxrregcount=0  --machine 64 --compile -cudart static    -DWIN32 -DWIN64 -DNDEBUG -D_CONSOLE -D_MBCS -Xcompiler "/EHsc /W3 /nologo /O2 /Fdx64\Release\vc141.pdb /FS   /MD " -o x64\Release\kernel.cu.obj "C:\Users\acous\Documents\Visual Studio 2017\Projects\week3_spmv\week3_spmv\kernel.cu" 
+C:/Users/acous/Documents/Visual Studio 2017/Projects/week3_spmv/week3_spmv/kernel.cu(71): warning : variable "host_P" was declared but never referenced
+  
+  kernel.cu
+C:/Users/acous/Documents/Visual Studio 2017/Projects/week3_spmv/week3_spmv/kernel.cu(136): warning C4996: 'cusparseDgthr': please use cusparseGather instead
+  C:/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v11.2/include\cusparse.h(489): note: 'cusparseDgthr' 선언을 참조하십시오.
+C:/Users/acous/Documents/Visual Studio 2017/Projects/week3_spmv/week3_spmv/kernel.cu(71): warning C4101: 'host_P' :참조되지 않은 지역 변수입니다.
+     C:\Users\acous\Documents\Visual Studio 2017\Projects\week3_spmv\x64\Release\week3_spmv.lib 라이브러리 및 C:\Users\acous\Documents\Visual Studio 2017\Projects\week3_spmv\x64\Release\week3_spmv.exp 개체를 생성하고 있습니다.
+kernel.cu.obj : error LNK2001: cusparseCreate 외부 기호를 확인할 수 없습니다.
+kernel.cu.obj : error LNK2001: cusparseDestroy 외부 기호를 확인할 수 없습니다.
+kernel.cu.obj : error LNK2001: cusparseGetErrorString 외부 기호를 확인할 수 없습니다.
+kernel.cu.obj : error LNK2001: cusparseDgthr 외부 기호를 확인할 수 없습니다.
+kernel.cu.obj : error LNK2001: cusparseCreateIdentityPermutation 외부 기호를 확인할 수 없습니다.
+kernel.cu.obj : error LNK2001: cusparseXcoosort_bufferSizeExt 외부 기호를 확인할 수 없습니다.
+kernel.cu.obj : error LNK2001: cusparseXcoosortByRow 외부 기호를 확인할 수 없습니다.
+MSVCRT.lib(exe_winmain.obj) : error LNK2001: WinMain 외부 기호를 확인할 수 없습니다.
+C:\Users\acous\Documents\Visual Studio 2017\Projects\week3_spmv\x64\Release\week3_spmv.exe : fatal error LNK1120: 8개의 확인할 수 없는 외부 참조입니다.
